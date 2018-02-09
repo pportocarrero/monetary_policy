@@ -1,0 +1,222 @@
+\PassOptionsToPackage{table}{xcolor}
+\documentclass[final]{report}
+\overfullrule=1mm
+
+\usepackage[right=0.8in, left=0.5in, top=0.85in, bottom=1in]{geometry}
+\usepackage{pgfplots, pgfplotstable}
+\usepackage{caption}
+\captionsetup{labelsep=space,justification=justified,singlelinecheck=off}
+\usepackage{fancyhdr}
+\usepackage{csvsimple}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage[outline]{contour} %used for logo, potentially move
+\usepackage[detect-all]{siunitx}
+\usepackage[eulergreek]{sansmath}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{microtype}
+\usepackage{tgbonum}
+\usepackage{tgtermes}
+\usepackage{fontawesome}
+\usepackage[us]{datetime}
+\usepackage{dcolumn}
+\usepackage{datenumber}
+\usepackage[colorlinks,
+	linkcolor=cyan!50!blue,
+	filecolor=cyan!50!blue,
+	citecolor=cyan!50!blue,
+	urlcolor=cyan!50!blue,
+	linktoc=all, pdfencoding=auto]{hyperref}
+
+% Color referencing
+\definecolor{red1}{RGB}{237,50,55}
+\definecolor{lightblue}{RGB}{5,148,185}
+\definecolor{gray1}{RGB}{210,211,213}
+
+%   TikZ externalize
+\usetikzlibrary{pgfplots.external, backgrounds, shadows, pgfplots.dateplot, 
+	patterns, pgfplots.fillbetween, pgfplots.groupplots} 
+\tikzexternalize[prefix=tikz/, up to date check=diff]
+%	\tikzset{external/force remake}
+
+	% Paragraph spacing
+\setlength{\parskip}{4pt}
+% Sans serif font
+\renewcommand*\sfdefault{cmss}
+\renewcommand{\familydefault}{\sfdefault}
+% Special font for title
+\newcommand{\setfont}[2]{{\fontfamily{#1}\selectfont #2}}
+% Custom section titles
+\titleformat{\section}{\large \bfseries \color{black!60}}{}{cm}
+{\hspace{-2.41cm} \includegraphics{sources/bar.pdf}}
+% Custom chart titles
+\newcommand{\ct}[2][]{
+	\noindent \includegraphics{sources/box.pdf} \color{black!90} \small{
+		{#1} \hfill \includegraphics{sources/box.pdf} {#2}}}
+% Custom chart footer
+\newcommand{\cf}[2][]{
+	\indent \color{black!90} \scriptsize{
+		{#1} \hfill {#2}}}
+% Custom toc title
+\titleformat{\chapter}{\large \bfseries \color{black!60}}{}{0cm}{}[\vspace{-12mm}]	
+% Chapter spacing
+\setcounter{secnumdepth}{-1}
+% Remove TOC chapter numbers
+%\renewcommand{\thesection}{}
+
+% Style for headers and footers, first page large header, no page number
+%\makeatletter
+%\setlength{\@fptop}{0pt}
+%\makeatother
+
+% First page
+\fancypagestyle{firststyle}{
+	\pagenumbering{gobble}
+	\headheight = 40pt
+	\headsep = 12pt
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0pt}
+	\lhead{ %
+		\includegraphics[width=6cm]{sources/signature_EN.jpg} \bigbreak {\hspace{0.5mm} \textbf Monthly Monetary Update \textcolor{red1}{$\vert$ SUMMARY}}}
+	\chead{}
+	\rhead{\setfont{qag}{\textbf {General Directorate of Public Indebtedness and Treasury} \\ Directorate of Analysis and Strategy \\ Investor Relations Office}\bigbreak {\today\ $\vert$ \currenttime\ GMT-5}}
+	\rfoot{}
+	\cfoot{}
+	\lfoot{}
+	
+	}
+
+% Main style			
+\fancypagestyle{main}{
+	\headheight = 20pt		
+	\fancyhf{}
+	\lhead{\Large{\textcolor{cyan!70!blue}
+			{\textbf{Macro and Markets Dashboard:}} United States}}
+	\rfoot{\footnotesize{\thepage}}
+	\lfoot{	\begin{minipage}[c]{0.05\textwidth}
+			\includegraphics[width=\textwidth]{sources/01_bdlogo} 
+		\end{minipage}
+		\begin{minipage}[c]{0.25\textwidth}
+			$\vert$ \footnotesize{Updated: \today}
+		\end{minipage}\vspace{0pt} 
+}}	
+
+% Last style bc of number issue in footer
+\fancypagestyle{last}{
+	\headheight = 16pt	
+	\fancyhf{}
+	\lhead{\Large{\textcolor{cyan!70!blue}
+			{\textbf{Macro and Markets Dashboard:}} United States}}
+	\rfoot{\footnotesize{\thepage}}
+	\cfoot{\raisebox{-\height}}
+	\lfoot{	\begin{minipage}[c]{0.05\textwidth}
+			\includegraphics[width=\textwidth]{sources/01_bdlogo} 
+		\end{minipage}
+		\begin{minipage}[c]{0.25\textwidth}
+			$\vert$ \footnotesize{\href{http://www.bd-econ.com/}
+				{BD Economics}}
+		\end{minipage}\vspace{0pt} 
+}}
+
+\begin{document}
+
+	% Page
+	
+	% Section: About the Dashboard
+	\small \color{black!80}
+	
+	\begin{minipage}{0.50\textwidth} 
+		\vspace{10mm}
+		
+		\large \bfseries \textcolor{red1}{Key numbers} \normalcolor \small \normalfont
+		\vspace{-2mm} 
+		\setlength{\tabcolsep}{5pt}
+		
+		\noindent \footnotesize 
+		\color{black!80}
+		\rowcolors{1}{}{black!7}
+		{\renewcommand{\arraystretch}{1.4}
+			\begin{tabular}{ l r r r r }
+				& & \normalsize \textsubscript{\begin{tabular}{c}
+						change \\ over prev.
+				\end{tabular}}& &
+				\normalsize \textsubscript{\begin{tabular}{c}
+						\vspace{1mm}\\ as of: \end{tabular} } \\ \hline
+				&  & \normalsize \textsubscript{\begin{tabular}{c}
+						one week\\ change \end{tabular} } & 
+				\normalsize \textsubscript{\begin{tabular}{c}
+						one month\\ change \end{tabular} }& \normalsize \textsubscript{\begin{tabular}{c}
+						\vspace{1mm}\\ as of: \end{tabular} } \\ \hline 
+
+				\hline
+			\end{tabular}
+		}
+		
+		\vspace{1mm}
+		\color{black!80} Source: Central Reserve Bank of Peru and National Institute of Statistics and Informatics of Peru. \\
+		\textsuperscript{1} As reported by economic analysts on the BCRP survey. \\
+		\textsuperscript{2} Is the result of the simple average of 12-month expectations by the financial system and economic analysts.\\
+		\textsuperscript{3} Index on business confidence surveyed by the BCRP.
+		\vspace{2mm}
+		
+		\vspace{0mm}
+		\vspace{-15mm}
+		\tableofcontents
+		\vspace{6mm}
+
+	\end{minipage} \hspace{7mm}
+
+%% CONTACT INFORMATION SECTION
+
+	\begin{minipage} {0.50\textwidth}
+		\tikzset{external/export next=false}		
+		\begin{tikzpicture}[clip=false]\hspace{-1.79cm}
+		\node[draw=none, fill=gray1, inner sep=10pt,
+	align=justify] (contact) {
+			\large \bfseries \textcolor{red1}{Contact Information} \\
+				\vspace{0.5mm}
+			\quad \color{black!7} . \\
+				\vspace{0.5mm}
+			\quad \normalsize \color{black!100}{\bfseries Investor Relations Office \hspace{1cm}}  \\
+				\vspace{0.5mm}
+			\quad \normalsize \color{black!100}{\textbf Directorate of Analysis and Strategy \hspace{1cm}}  \\
+				\vspace{0.5mm}
+			\quad \normalsize \color{black!100}{\textbf General Directorate of Public Indebtedness and Treasury \hspace{1cm}}  \\
+				\vspace{0.5mm}
+			\quad \normalsize \color{black!90}{Ministry of Economy and Finance \hspace{1cm}} \\
+				\vspace{0.5mm}
+			\quad \normalsize \color{black!90}{+51 1 3115930 ext. 2885 \hspace{1cm}} \\
+				\vspace{0.5mm}
+			\quad \normalsize \color{black!90}{\href{mailto:investor@mef.gob.pe}{investor@mef.gob.pe} \hspace{1cm}} \\
+				\vspace{0.5mm}
+			\quad \normalsize \color{black!90}{\href{https://www.mef.gob.pe/investor.php}{https://www.mef.gob.pe/investor.php} \hspace{1cm}} \\
+			 };
+		\draw [line width=.15cm, color=red1] (contact.south east) -- (contact.north east);
+		\end{tikzpicture}				
+
+		
+	\end{minipage} \hspace{-2.41mm}
+
+%% END CONTACT INFORMATION SECTION
+
+	\begin{minipage}{0.50\textwidth} 	\vspace{4mm}	
+		\small
+		\section{\textcolor{red1}{About the Dashboard}}
+		\vspace{-1mm}
+		
+		\small \normalfont
+		The Macro and Markets Dashboard for the United States contains more than 100 indicators of the performance of the U.S. economy. The dashboard includes twelve categories of charts, and a table of exchange rates.  \hfill \vspace{4mm}
+		
+		Dashboard plots follow a uniform design. The line plots show trends over the past decade, while the horizontal bar plots decompose recent developments. The latest value and its reference period are listed in the bottom left corner of the plot area for line plots. Below each plot is a brief listing of the source with a link (in blue) to the source data. 
+
+	\end{minipage}
+
+	\thispagestyle{firststyle}	
+	
+\end{document}
