@@ -17,6 +17,7 @@
 \usepackage{array}
 \usepackage{xcolor}
 \usepackage{titlesec}
+\usepackage{titletoc}
 \usepackage{color}
 \usepackage{amssymb}
 \usepackage{multicol}
@@ -28,9 +29,10 @@
 \usepackage{dcolumn}
 \usepackage{sourcesanspro}
 \usepackage{datenumber}
-%\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{vwcol}
 \usepackage[colorlinks,
-	linkcolor=cyan!50!blue,
+	linkcolor=blackdark,
 	filecolor=cyan!50!blue,
 	citecolor=cyan!50!blue,
 	urlcolor=lightblue,
@@ -59,18 +61,18 @@
 % Special font for title
 \newcommand{\setfont}[2]{{\fontfamily{#1}\selectfont #2}}
 % Custom section titles
-\titleformat{\section} {\large \bfseries \color{blackdark}}{}{cm}
-{\hspace{-0.7cm} \includegraphics{sources/bar.png}}
+\titleformat{\section}{\large \bfseries \color{red1}}{}{cm}
+	{\hspace{1cm} \includegraphics[width=1cm]{sources/bar.png}}
 % Custom chart titles
 \newcommand{\ct}[2][]{
-	\noindent \includegraphics{sources/box.pdf} \color{black!90} \small{
+	\noindent \includegraphics[width=0.5cm]{sources/box.png} \color{black!90} \small{
 		{#1} \hfill \includegraphics{sources/box.png} {#2}}}
 % Custom chart footer
 \newcommand{\cf}[2][]{
 	\indent \color{black!90} \scriptsize{
 		{#1} \hfill {#2}}}
 % Custom toc title
-\titleformat{\chapter}{\large \bfseries \color{red1}}{}{0cm}{}[\vspace{-12mm}]	
+\titleformat{\chapter}{\large \bfseries \color{red1}}{}{0cm}{}[\vspace{-13mm}]
 % Chapter spacing
 \setcounter{secnumdepth}{-1}
 % Remove TOC chapter numbers
@@ -89,12 +91,37 @@
 	\fancyhf{}
 	\renewcommand{\headrulewidth}{0pt}
 	\lhead{ %
-		\vspace{1.8cm} \includegraphics[width=21.6cm]{sources/header12vf.png} \medbreak {\hspace{0.3cm} {\normalsize \textbf Monthly Monetary Update \textcolor{red1}{$\vert$ SUMMARY}}}\normalsize \hspace{9.3cm}\today\ $\vert$ \currenttime\ GMT-5}
+		\vspace{1.8cm} \includegraphics[width=21.6cm]{sources/header12vf.png} \medbreak {\hspace{0.3cm} {\normalsize \textbf Monthly Monetary Update \textcolor{red1}{$\vert$ SUMMARY}}}\normalsize \hspace{9.2cm}\today\ $\vert$ \currenttime\ GMT-5}
 	\chead{}
 	\rhead{}
 	\rfoot{}
 	\cfoot{}
-	\lfoot{}
+	\lfoot{\vspace{-6.95cm} \tikzset{external/export next=false}		
+		\begin{tikzpicture}[clip=false] \hspace{0cm}
+		\node[draw=none, fill=black!5, inner sep=10pt,
+	align=justify] (contact) {
+			\large \bfseries \textcolor{red1}{Contact Information} \\
+				\vspace{0.5mm}
+			\color{black!7} \\
+				\vspace{0.5mm}
+			\normalsize \color{black!100}{\bfseries Investor Relations Office \hspace{0.2cm}} \\
+				\vspace{0.5mm}
+			\normalsize \color{black!100}{\bfseries Directorate of Analysis and Strategy \hspace{0.2cm}} \\
+				\vspace{0.5mm}
+			\normalsize \color{black!100}{\bfseries General Directorate of Public Indebtedness and Treasury \hspace{0.2cm}} \\
+				\vspace{0.5mm}
+			\normalsize \color{black!90}{Ministry of Economy and Finance \hspace{0.2cm}} \\
+				\vspace{0.5mm}
+			\normalsize \color{black!90}{+51 1 3115930 ext. 2885 \hspace{0.2cm}} \\
+				\vspace{0.5mm}
+			\normalsize \color{black!90}{\href{mailto:investor@mef.gob.pe}{investor@mef.gob.pe} \hspace{0.2cm}} \\
+				\vspace{0.5mm}
+			\normalsize \color{black!90}{\href{https://www.mef.gob.pe/investor.php}{https://www.mef.gob.pe/investor.php} \hspace{0.2cm}} \\
+				\vspace{0.5mm}
+			 \includegraphics[width=5cm]{sources/signature_EN.jpg}		 
+			 };
+		\draw [line width=.08cm, color=red1] (contact.south east) -- (contact.north east);
+		\end{tikzpicture}}
 	}
 
 % Main style			
@@ -130,14 +157,15 @@
 }}
 
 \begin{document}
-
+\begin{vwcol}[widths={0.45,0.55},
+ sep=.5cm, justify=flush,rule=0pt,indent=1em]
 	\begin{minipage}{0.36\textwidth} 
 	
 		\vspace{4cm}
 
 %% KEY NUMBERS TABLE
 
-		\large \bfseries \textcolor{red1}{Key numbers} \normalcolor \small \normalfont
+		\hspace{0.2cm} \large \bfseries \textcolor{red1}{Key numbers} \normalcolor \small \normalfont
 		\vspace{0.3cm} 
 		
 		\noindent \footnotesize 
@@ -168,22 +196,31 @@
 %% END KEY NUMBERS TABLE
 
 %% TABLE OF CONTENTS
-		\tableofcontents
+%		\vspace{-2cm}		
+%		\tableofcontents
 %% END TABLE OF CONTENTS
-	\end{minipage} \hspace{7mm}
+
+%% CONTACT INFORMATION SECTION
+%		\vspace{1cm}
+
+%% END CONTACT INFORMATION SECTION
+
+	\end{minipage}
 	
 %% DETAILS
-	\begin{minipage}{0.50\textwidth} \vspace{4cm}\setfont{qag}
+	\begin{minipage}{0.50\textwidth} \setfont{qag}
 
-{\textcolor{red1} {\bfseries {\Large Central Reserve Bank of Peru keeps its benchmark interest rate at 3.00\% as inflation nears the lower end of the target range}}}\\ %% TITLE OF THE REPORT. YOU CAN CHANGE THIS
+%\vspace{1cm}
 
-\bfseries \textcolor{red1}{\large Highlights}\\ % HIGHLIGHTS TITLE. YOU CAN CHANGE THE HIGHLIGHTS
-\normalsize \normalfont{
-	Inflation continued its downward trend, with the headline price index at 1.25\% yoy.\\
-	Indicators of business confidence improved slightly in January.
-	}\\
-
+{\textcolor{red1} {\bfseries {\Large Central Reserve Bank of Peru keeps its benchmark interest rate at 3.00\% as inflation nears the lower end of the target range}}} %% TITLE OF THE REPORT. YOU CAN CHANGE THIS
+\bigbreak
+\bfseries \textcolor{red1}{\large Highlights} % HIGHLIGHTS TITLE. YOU CAN CHANGE THE HIGHLIGHTS
+\begin{enumerate}
+\item \normalsize \normalfont{Inflation continued its downward trend, with the headline price index at 1.25\% yoy.} \vspace{-0.3cm}
+\item \normalsize \normalfont{Indicators of business confidence improved slightly in January.}
+\end{enumerate} \vspace{0cm}
 \bfseries \textcolor{red1}{\large Details}\\ % DETAILS TITLE AND CONTENT. YOU CAN CHANGE THE CONTENT
+\\
 \normalsize \normalfont{
 The Board of the Central Reserve Bank of Peru decided to leave unchanged its benchmark monetary policy rate at 3.00\% (see Exhibit 1) on declining inflation and economic activity below its potential. On January, BCRP cut its rate 25bp as inflation lagged.\\
 
@@ -195,59 +232,29 @@ Inflation measurements continued showing a downward trend as previous months; th
 
 The BCRP expects inflation will continue to decline around the lower end of the range, but will converge to 2\% in the medium and long term. Inflation expectations for the next 12 months eased further to 2.23\% (prev. 2.30\%, see Exhibit 3). Inflation expectations for 2018 and 2019, as reported by analysts, kept their previous levels of 2.4\% and 2.5\%, respectively. Business confidence on the economy for the next 3 and 12 months improved slightly in January (see Exhibit 4).\\
 
-You can find more information at (in Spanish):\\
+You can find more information at (link in Spanish):\\
 \href{http://www.bcrp.gob.pe/docs/Transparencia/Notas-Informativas/2018/nota-informativa-2018-02-08-1.pdf}{http://www.bcrp.gob.pe/docs/Transparencia/Notas-Informativas/2018/nota-informativa-2018-02-08-1.pdf}
 }
 	\end{minipage} %\hspace{-2.41mm}
+\end{vwcol}
 %% END DETAILS
-
+	
 \thispagestyle{firststyle}
 
-%% CONTACT INFORMATION SECTION
-		\vspace{10.35cm}
-
-		\tikzset{external/export next=false}		
-		\begin{tikzpicture}[clip=false] \hspace{-0.55cm}
-		\node[draw=none, fill=black!10, inner sep=10pt,
-	align=justify] (contact) {
-			\large \bfseries \textcolor{red1}{Contact Information} \\
-				\vspace{0.5mm}
-			\quad \color{black!7} . \\
-				\vspace{0.5mm}
-			\quad \normalsize \color{black!100}{\bfseries Investor Relations Office \hspace{0.5cm}}  \\
-				\vspace{0.5mm}
-			\quad \normalsize \color{black!100}{\bfseries Directorate of Analysis and Strategy \hspace{0.5cm}}  \\
-				\vspace{0.5mm}
-			\quad \normalsize \color{black!100}{\bfseries General Directorate of Public Indebtedness and Treasury \hspace{0.5cm}}  \\
-				\vspace{0.5mm}
-			\quad \normalsize \color{black!90}{Ministry of Economy and Finance \hspace{0.5cm}} \\
-				\vspace{0.5mm}
-			\quad \normalsize \color{black!90}{+51 1 3115930 ext. 2885 \hspace{0.5cm}} \\
-				\vspace{0.5mm}
-			\quad \normalsize \color{black!90}{\href{mailto:investor@mef.gob.pe}{investor@mef.gob.pe} \hspace{0.5cm}} \\
-				\vspace{0.5mm}
-			\quad \normalsize \color{black!90}{\href{https://www.mef.gob.pe/investor.php}{https://www.mef.gob.pe/investor.php} \hspace{0.5cm}}
-			 };
-		\draw [line width=.15cm, color=red1] (contact.south east) -- (contact.north east);
-		\end{tikzpicture}
-
-%% END CONTACT INFORMATION SECTION
-\thispagestyle{main}
 	\newpage
 	
-
+\thispagestyle{main}
 	
-	\begin{minipage}{0.50\textwidth} 	\vspace{4mm}
-	
-		\small
-		\section{\textcolor{blackdark}{About the Dashboard}}
-		\vspace{-1mm}
+%	\begin{minipage}{0.50\textwidth} 	\vspace{4mm}
+%		\vspace{3cm}
+%		\section{\textcolor{blackdark}{About the Dashboard}}
+%		\vspace{0cm}
 		
-		\small \normalfont
-		The Macro and Markets Dashboard for the United States contains more than 100 indicators of the performance of the U.S. economy. The dashboard includes twelve categories of charts, and a table of exchange rates.  \hfill \vspace{4mm}
+%		\small \normalfont
+%		The Macro and Markets Dashboard for the United States contains more than 100 indicators of the performance of the U.S. economy. The dashboard includes twelve categories of charts, and a table of exchange rates.  \hfill \vspace{4mm}
 		
-		Dashboard plots follow a uniform design. The line plots show trends over the past decade, while the horizontal bar plots decompose recent developments. The latest value and its reference period are listed in the bottom left corner of the plot area for line plots. Below each plot is a brief listing of the source with a link (in blue) to the source data. 
+%		Dashboard plots follow a uniform design. The line plots show trends over the past decade, while the horizontal bar plots decompose recent developments. The latest value and its reference period are listed in the bottom left corner of the plot area for line plots. Below each plot is a brief listing of the source with a link (in blue) to the source data. 
 
-	\end{minipage}
+%	\end{minipage}
 
 \end{document}
