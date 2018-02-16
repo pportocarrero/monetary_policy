@@ -62,7 +62,7 @@
 \newcommand{\setfont}[2]{{\fontfamily{#1}\selectfont #2}}
 % Custom section titles
 \titleformat{\section}{\large \bfseries \color{red1}}{}{cm}
-	{\hspace{1cm} \includegraphics[width=1cm]{sources/bar.png}}
+	{\hspace{1cm}}
 % Custom chart titles
 \newcommand{\ct}[2][]{
 	\noindent \includegraphics[width=0.5cm]{sources/box.png} \color{black!90} \small{
@@ -98,17 +98,17 @@
 	\cfoot{}
 	\lfoot{\vspace{-6.95cm} \tikzset{external/export next=false}		
 		\begin{tikzpicture}[clip=false] \hspace{0cm}
-		\node[draw=none, fill=black!5, inner sep=10pt,
+		\node[draw=none, fill=black!3, inner sep=10pt,
 	align=justify] (contact) {
 			\large \bfseries \textcolor{red1}{Contact Information} \\
 				\vspace{0.5mm}
 			\color{black!7} \\
 				\vspace{0.5mm}
-			\normalsize \color{black!100}{\bfseries Investor Relations Office \hspace{0.2cm}} \\
+			\normalsize \color{black!100}{\bf Investor Relations Office \hspace{0.2cm}} \\
 				\vspace{0.5mm}
-			\normalsize \color{black!100}{\bfseries Directorate of Analysis and Strategy \hspace{0.2cm}} \\
+			\normalsize \color{black!100}{\bf Directorate of Analysis and Strategy \hspace{0.2cm}} \\
 				\vspace{0.5mm}
-			\normalsize \color{black!100}{\bfseries General Directorate of Public Indebtedness and Treasury \hspace{0.2cm}} \\
+			\normalsize \color{black!100}{\bf General Directorate of Public Indebtedness and Treasury \hspace{0.2cm}} \\
 				\vspace{0.5mm}
 			\normalsize \color{black!90}{Ministry of Economy and Finance \hspace{0.2cm}} \\
 				\vspace{0.5mm}
@@ -159,9 +159,7 @@
 \begin{document}
 \begin{vwcol}[widths={0.45,0.55},
  sep=.5cm, justify=flush,rule=0pt,indent=1em]
-	\begin{minipage}{0.36\textwidth} 
-	
-		\vspace{4cm}
+	\begin{minipage}{0.36\textwidth} \vspace{4cm}
 
 %% KEY NUMBERS TABLE
 
@@ -192,7 +190,7 @@
 		\color{black!80} Source: Central Reserve Bank of Peru and National Institute of Statistics and Informatics of Peru. \\
 		\textsuperscript{1} As reported by economic analysts on the BCRP survey. \\
 		\textsuperscript{2} Is the result of the simple average of 12-month expectations by the financial system and economic analysts.\\
-		\textsuperscript{3} Index on business confidence surveyed by the BCRP.\\
+		\textsuperscript{3} Index on business confidence surveyed by the BCRP. \\
 %% END KEY NUMBERS TABLE
 
 %% TABLE OF CONTENTS
@@ -208,9 +206,8 @@
 	\end{minipage}
 	
 %% DETAILS
-	\begin{minipage}{0.50\textwidth} \setfont{qag}
-
-%\vspace{1cm}
+	\begin{minipage}{0.50\textwidth} \vspace{4cm}
+%	\vspace{1cm}
 
 {\textcolor{red1} {\bfseries {\Large Central Reserve Bank of Peru keeps its benchmark interest rate at 3.00\% as inflation nears the lower end of the target range}}} %% TITLE OF THE REPORT. YOU CAN CHANGE THIS
 \bigbreak
