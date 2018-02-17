@@ -1,0 +1,23 @@
+{\textcolor{red1} {\bfseries {\Large Central Reserve Bank of Peru keeps its benchmark interest rate at 3.00\% as inflation nears the lower end of the target range}}} %% TITLE OF THE REPORT. YOU CAN CHANGE THIS
+\bigbreak
+\bfseries \textcolor{red1}{\large Highlights} % HIGHLIGHTS TITLE. YOU CAN CHANGE THE HIGHLIGHTS
+\begin{enumerate}
+\item \normalsize \normalfont{Inflation continued its downward trend, with the headline price index at 1.25\% yoy.} \vspace{-0.3cm}
+\item \normalsize \normalfont{Indicators of business confidence improved slightly in January.}
+\end{enumerate} \vspace{0cm}
+\bfseries \textcolor{red1}{\large Details}\\ % DETAILS TITLE AND CONTENT. YOU CAN CHANGE THE CONTENT
+\\
+\normalsize \normalfont{
+The Board of the Central Reserve Bank of Peru decided to leave unchanged its benchmark monetary policy rate at 3.00\% (see Exhibit 1) on declining inflation and economic activity below its potential. On January, BCRP cut its rate 25bp as inflation lagged.\\
+
+This decision takes into account that: (i) supply shocks reversed, and as a consequence, inflation dropped further in January; (ii) inflation expectations are also declining; (iii) economic activity is growing below its potential; (iv) global economic activity continued showing favorable indicators; (v) positive signs related to commodity prices; and (vi) capital inflows to emerging economies, although international financial markets are experiencing some uncertainty.\\
+
+In its statement, the Board informed it would pay close attention to new information on inflation and its determinants, to consider if deemed necessary, further changes to the monetary policy stance.\\
+
+Inflation measurements continued showing a downward trend as previous months; the headline price index was 0.13\% for January (prev. 0.16\%) and 1.25\% yoy. In the first month of 2018, all consumption groups saw price gains, with the exception of transport and communication prices (-0.84\% for the month and -0.14\% yoy). House rents, oil and electricity prices advanced the most, with 0.50\% for the month and 3.33\% yoy. Excluding food and energy prices, inflation came negative at -0.13\% (prev. 0.29\%) and 1.97\% yoy (prev. 2.15\%), right in the middle of the target range (see Exhibit 2).\\
+
+The BCRP expects inflation will continue to decline around the lower end of the range, but will converge to 2\% in the medium and long term. Inflation expectations for the next 12 months eased further to 2.23\% (prev. 2.30\%, see Exhibit 3). Inflation expectations for 2018 and 2019, as reported by analysts, kept their previous levels of 2.4\% and 2.5\%, respectively. Business confidence on the economy for the next 3 and 12 months improved slightly in January (see Exhibit 4).\\
+
+You can find more information at (link in Spanish):\\
+\href{http://www.bcrp.gob.pe/docs/Transparencia/Notas-Informativas/2018/nota-informativa-2018-02-08-1.pdf}{http://www.bcrp.gob.pe/docs/Transparencia/Notas-Informativas/2018/nota-informativa-2018-02-08-1.pdf}
+}
