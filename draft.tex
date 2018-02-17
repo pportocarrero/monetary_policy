@@ -157,9 +157,10 @@
 }}
 
 \begin{document}
+
 \begin{vwcol}[widths={0.45,0.55},
- sep=.5cm, justify=flush,rule=0pt,indent=1em]
-	\begin{minipage}{0.36\textwidth} \vspace{4cm}
+ sep=.5cm, justify=flush,rule=0pt,indent=0em]
+	\begin{minipage}{0.40\textwidth} \vspace{4cm}
 
 %% KEY NUMBERS TABLE
 
@@ -170,18 +171,21 @@
 		\color{black!100}
 		\rowcolors{1}{}{black!7}
 		{\renewcommand{\arraystretch}{1.4}
-			\hspace{0.2cm} \begin{tabular}{ l r r r r }
-				& & \normalsize \textsubscript{\begin{tabular}{c}
-						change \\ over prev.
-				\end{tabular}}& &
-				\normalsize \textsubscript{\begin{tabular}{c}
-						\vspace{1mm}\\ as of: \end{tabular} } \\ \hline
-				&  & \normalsize \textsubscript{\begin{tabular}{c}
-						one week\\ change \end{tabular} } & 
-				\normalsize \textsubscript{\begin{tabular}{c}
-						one month\\ change \end{tabular} }& \normalsize \textsubscript{\begin{tabular}{c}
-						\vspace{1mm}\\ as of: \end{tabular}} \\ \hline 
-
+			\hspace{0cm} \begin{tabular}{p{4cm}ccc} %[c] %{p{4cm}p{1.5cm}p{1.5cm}p{1.5cm}}
+%				& \normalsize \textsubscript{\begin{tabular}{c}
+%						(\% yoy)
+%				\end{tabular}}&
+%				\normalsize \textsubscript{\begin{tabular}{c}
+%						\vspace{1mm} (\% ytd) \end{tabular}}&
+%				\normalsize \textsubscript{\begin{tabular}{c}
+%						\vspace{1mm} (\% 12mma) \end{tabular}} \\\hline
+				\input{indices.txt} \\
+%				&  & \normalsize \textsubscript{\begin{tabular}{c}
+%						one week\\ change \end{tabular} } & 
+%				\normalsize \textsubscript{\begin{tabular}{c}
+%						one month\\ change \end{tabular} }& \normalsize \textsubscript{\begin{tabular}{c}
+%						\vspace{1mm}\\ as of: \end{tabular}} \\\hline 
+%				\input{vixch.txt}
 				\hline
 			\end{tabular}
 		}
@@ -190,24 +194,17 @@
 		\color{blackdark} Source: Central Reserve Bank of Peru and National Institute of Statistics and Informatics of Peru. \\
 		\color{blackdark} \textsuperscript{1} As reported by economic analysts on the BCRP survey. \\
 		\color{blackdark} \textsuperscript{2} Is the result of the simple average of 12-month expectations by the financial system and economic analysts. \\
-		\color{blackdark} \textsuperscript{3} Index on business confidence surveyed by the BCRP. \\
+		\color{blackdark} \textsuperscript{3} Index on business confidence surveyed by the BCRP.
 %% END KEY NUMBERS TABLE
 
 %% TABLE OF CONTENTS
 %		\vspace{-2cm}		
 %		\tableofcontents
 %% END TABLE OF CONTENTS
-
-%% CONTACT INFORMATION SECTION
-%		\vspace{1cm}
-
-%% END CONTACT INFORMATION SECTION
-
 	\end{minipage}
 	
 %% DETAILS
-	\begin{minipage}{0.50\textwidth} \vspace{4cm}
-%	\vspace{1cm}
+	\begin{minipage}{0.52\textwidth} \vspace{2cm}
 
 {\textcolor{red1} {\bfseries {\Large Central Reserve Bank of Peru keeps its benchmark interest rate at 3.00\% as inflation nears the lower end of the target range}}} %% TITLE OF THE REPORT. YOU CAN CHANGE THIS
 \bigbreak
