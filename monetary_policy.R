@@ -1,4 +1,4 @@
-setwd("C:/Users/pportocarrero@mef.gob.pe/Desktop/monetary_policy") #Sets the working directory
+setwd("/Users/Pedro/Desktop/monetary_policy") #Sets the working directory
 
 library(readxl) #Loads the necessary library to read excel files
 
