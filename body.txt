@@ -1,13 +1,3 @@
-{\textcolor{red1} {\bfseries {\Large Central Reserve Bank of Peru keeps its benchmark interest rate at 3.00\% as inflation nears the lower end of the target range}}} %% TITLE OF THE REPORT. YOU CAN CHANGE THIS
-\bigbreak
-\bfseries \textcolor{red1}{\large Highlights} % HIGHLIGHTS TITLE. YOU CAN CHANGE THE HIGHLIGHTS
-\begin{enumerate}
-\item \normalsize \normalfont{Inflation continued its downward trend, with the headline price index at 1.25\% yoy.} \vspace{-0.3cm}
-\item \normalsize \normalfont{Indicators of business confidence improved slightly in January.}
-\end{enumerate} \vspace{0cm}
-\bfseries \textcolor{red1}{\large Details}\\ % DETAILS TITLE AND CONTENT. YOU CAN CHANGE THE CONTENT
-\\
-\normalsize \normalfont{
 The Board of the Central Reserve Bank of Peru decided to leave unchanged its benchmark monetary policy rate at 3.00\% (see Exhibit 1) on declining inflation and economic activity below its potential. On January, BCRP cut its rate 25bp as inflation lagged.\\
 
 This decision takes into account that: (i) supply shocks reversed, and as a consequence, inflation dropped further in January; (ii) inflation expectations are also declining; (iii) economic activity is growing below its potential; (iv) global economic activity continued showing favorable indicators; (v) positive signs related to commodity prices; and (vi) capital inflows to emerging economies, although international financial markets are experiencing some uncertainty.\\
@@ -20,4 +10,3 @@ The BCRP expects inflation will continue to decline around the lower end of the 
 
 You can find more information at (link in Spanish):\\
 \href{http://www.bcrp.gob.pe/docs/Transparencia/Notas-Informativas/2018/nota-informativa-2018-02-08-1.pdf}{http://www.bcrp.gob.pe/docs/Transparencia/Notas-Informativas/2018/nota-informativa-2018-02-08-1.pdf}
-}

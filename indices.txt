@@ -1,1 +1,16 @@
-\bfseries Monetary policy interest rate & & 3.00\% & February \vspace{0.2cm} \\ \bfseries Monthly \% change & January & December & November \\ Inflation & 0.13 & 0.16 & -0.2 \\ Inflation ex. food and energy & -0.13 & 0.29 & 0.03 \\ ytd \% ch. & 0.13 & 1.36 & 1.21 \\ \bfseries \% year-over-year & January & December & November \\ Inflation & 1.25 & 1.36 & 1.54 \\Inflation ex. food and energy & 1.97 & 2.15 & 2.23 \vspace{0.2cm} \\ \bfseries Inflation target & 2\% (+/-1\%) & & \vspace{0.2cm} \\ \bfseries Inflation expectations\textsuperscript{1} & January & December & November \\For 2018 & 2.4 & 2.4 & 2.5 \\ For 2019 & 2.5 & 2.5 & 2.7 \\ 12-month expectations\textsuperscript{2} & 2.23 & 2.30 & 2.48 \vspace{0.2cm} \\ \bfseries Expectations on the economy\textsuperscript{3} & January & December & November \\ 3 months ahead (points) & 59 &  54 & 63 \\ 12 months ahead (points) & 71 & 69 & 76 \vspace{0.2cm} \\ \bfseries The next meeting will be held on: & March 8\textsuperscript{th} \vspace{0.2cm}
+\bfseries Monetary policy interest rate & 3.00\% & February \vspace{0.2cm}\\
+ & January & December\\
+Inflation (monthly \% chg.) & 0.13 & 0.16\\
+Inflation (yoy \%) & 1.25 & 1.36\\
+Inflation ex. food and energy (monthly \% chg.) & -0.13 & 0.29\\
+Inflation ex. food and energy (yoy \%) & 1.97 & 2.15\\
+Inflation (ytd \%) & 0.13 & 1.36\\
+\bfseries Inflation target & 2\% (+/-1\%) & \vspace{0.2cm}\\
+\bfseries Inflation expectations\textsuperscript{1} & January & December\\
+For 2018 & 2.4 & 2.4\\
+For 2019 & 2.5 & 2.5\\
+12-month expectations\textsuperscript{2} & 2.23 & 2.30 \vspace{0.2cm}\\
+\bfseries Expectations on the economy\textsuperscript{3} & January & December\\
+3 months ahead (points) & 59 & 54\\
+12 months ahead (points) & 71 & 69 \vspace{0.2cm}\\
+\bfseries The next meeting will be held on: & March 8\textsuperscript{th} \vspace{0.2cm} &
